@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+* {
+  font-family: 'Roboto', sans-serif;
+}
+button {
+  padding: 0;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+}
+button:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+.contact-wrapper {
+  position: fixed;
+  right: 0;
+  bottom: 80px;
+  transform: translateX(100%);
+  -webkit-transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+.contact-wrapper.contact-wrapper--open {
+  transform: translateX(-10px);
+}
+.contact-panel {
+  background-color: #fff;
+  border: 1px solid #101845;
+  max-width: 500px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+.contact-panel__header {
+  position: relative;
+  background-color: #101845;
+  color: #fff;
+  font-size: 21px;
+  line-height: 16px;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+}
+.contact-panel ul {
+  list-style-type: none;
+  padding: 15px;
+  margin: 0;
+  text-align: center;
+}
+.contact-panel ul li {
+  margin: 0 10px;
+  display: inline-block;
+}
+.contact-panel ul li a {
+  border-radius: 50%;
+  color: #101845;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  line-height: 50px;
+  text-decoration: none;
+  box-shadow: 0 1px 2px 1px rgba(170, 170, 170, 0.2);
+  -webkit-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s;
+}
+.contact-panel ul li a:hover {
+  box-shadow: 0 2px 5px 1px rgba(170, 170, 170, 0.6);
+}
+.contact-close {
+  border: 0;
+  color: #ccc;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  line-height: 48px;
+}
+.contact-close:focus {
+  outline: none;
+}
+.contact-button {
+  border: 0;
+  background-color: #101845;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+  font-size: 16px;
+  line-height: 20px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 4px;
+}
+.contact-button:hover {
+  background-color: #212b63;
+}
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.typing-demo {
+  width: 26ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
