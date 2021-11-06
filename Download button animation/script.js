@@ -4,7 +4,7 @@ document.querySelectorAll('.button').forEach(button => {
         svg = button.querySelector('svg'),
         svgPath = new Proxy({
             y: null,
-            smoothing: nul
+            smoothing: null
         }, {
             set(target, key, value) {
                 target[key] = value;
